@@ -34,7 +34,7 @@ public class IndexController {
     Long totalCount = flashCardService.getCurrentCount();
       if (totalCount > MAX_ITEMS_TO_SHOW) {
           ctaBuilder.append(" and ");
-          ctaBuilder.append(totalCount);
+          ctaBuilder.append(totalCount - MAX_ITEMS_TO_SHOW);
           ctaBuilder.append(" more");
       }
 
